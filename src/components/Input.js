@@ -29,7 +29,7 @@ const style = StyleSheet.create({
 
 class Input extends Component {
     render() {
-        const { label, placeholder, secureTextEntry } = this.props
+        const { label, placeholder, secureTextEntry, value, onChangeText } = this.props
         return (
             <View style={ style.container }>
                 <Text style={ style.label }>{ label }</Text>
@@ -37,7 +37,9 @@ class Input extends Component {
                 style={ style.label }
                 placeholder={ placeholder }
                 secureTextEntry= { secureTextEntry }
-                autoCorrect= { false }/>
+                autoCorrect= { false }
+                value={ value }
+                onChangeText= { onChangeText }/>
             </View>
         );
     }
